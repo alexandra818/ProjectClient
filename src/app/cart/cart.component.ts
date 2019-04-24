@@ -29,8 +29,13 @@ export class CartComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.rentals = await this.getRentals('rental');
+    await this.refresh();
+    // this.rentals = await this.getRentals('rental');
 
+  }
+
+  async refresh() {
+    this.rentals = await this.getRentals('rental');
   }
 
   async getRentals(path: string) {
@@ -39,9 +44,30 @@ export class CartComponent implements OnInit {
     return resp;
   }
 
-  async createRental(path: string, payload: any) {
-    const resp = await this.http.post(path, payload);
-    console.log('from createRental resp: ', payload);
-  }
+  async createRental() {
+    const rental = {
+      price: null,
+      location: null,
+      description: null,
+      cancellations: null
+    };
+    const resp = await this.http.post('rental', rental);
+    console.log('from createRental resp: ', resp);
+    if (resp) {
+      this.refresh();
 
+    } else {
+      this.toastService.showToast('danger', 3000, 'Unable to post.');
+  }
+  return resp;
+}
+
+  async updateRental(rental: any) {
+    console.log('from updateRental rental: ', rental);
+    const resp = await this.http.put(`rental/id/${rental.id}`, rental);
+    if (resp) {
+      this.toastService.showToast('success', 3000, 'Successfully updated.');
+    }
+    return resp;
+  }
 }

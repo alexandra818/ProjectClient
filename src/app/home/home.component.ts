@@ -7,12 +7,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+loggedIn = false;
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
   ) { }
 
+  // if not logged in, route to login
   ngOnInit() {
-  }
+  //   const token = localStorage.getItem('id_token');
+  //   if (token == null) {
+  //     this.loggedIn = false;
+  //     this.router.navigate(['login']);
+  //   } else {
+  //     this.loggedIn = true;
+  //   }
 
+  // }
+
+}
 }
