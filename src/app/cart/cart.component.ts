@@ -70,4 +70,20 @@ export class CartComponent implements OnInit {
     }
     return resp;
   }
+
+  async removeRental(car: any, index: number) {
+    console.log('from removeR...', index);
+    // this.rentals.splice(index, 1);
+    const resp = await this.http.delete(`rental/id/${car.id}`);
+    console.log('resp from removeR...', resp);
+    if (resp) {
+      this.refresh();
+      this.toastService.showToast('success', 3000, 'Successfully deleted.');
+    } else {
+      this.toastService.showToast('danger', 3000, 'Delete failed!');
+
+    }
+  }
+
+
 }
