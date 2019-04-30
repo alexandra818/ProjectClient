@@ -1,1 +1,71 @@
-<app-cart></app-cart>
+<div class="main-app-grid">
+  <div class="main-header">
+    Listings
+  </div>
+  <div class="main-content">
+    <table class="table">
+      <thead class="thead-primary">
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">Price</th>
+          <th scope="col">Location</th>
+          <th scope="col">Email</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rental of rentals; let i = index">
+          <img class="cover" [attr.src]="rental.image_url" alt="bike">
+          <!-- <td><input [(ngModel)]="rental.image_url" type="text" class="form-control" placeholder="image"></td> -->
+          <td><input [(ngModel)]="rental.price" type="text" class="form-control" placeholder="price"></td>
+          <td><input [(ngModel)]="rental.location" type="text" class="form-control" placeholder="location"></td>
+          <td><input [(ngModel)]="rental.cancellations" type="text" class="form-control" placeholder="cancellations"></td>
+          <td><input [(ngModel)]="rental.description" type="text" class="form-control" placeholder="description"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  <div class="main-footer">
+    Footer
+  </div>
+</div>
+
+
+
+<!-- 
+
+<div class="contact-grid">
+  <div class="gallery-grid">
+    <mat-card class="example-card" *ngFor="let rental of rentals; let i = index">
+      <mat-card-content>
+        <img class="cover" [attr.src]="rental.image_url" alt="Image">
+        <p>
+          <label for="image">Image</label>
+          <input [(ngModel)]="rental.image_url" type="text" class="form-control" placeholder="Image" aria-label="Image" readonly>
+        </p> 
+        <p>
+          <label for="price">Price</label>
+          <input class="border" [(ngModel)]="rental.price" type="text" class="form-control" placeholder="Price" aria-label="price"
+            aria-describedby="basic-addon1" readonly>
+        </p>
+        <p>
+          <label for="location">Location</label>
+          <input class="border" [(ngModel)]="rental.location"type="text" class="form-control" placeholder="Location" aria-label="location"
+            aria-describedby="basic-addon1" readonly>
+        </p>
+        <p>
+          <label for="description">Description</label>
+          <input class="border" [(ngModel)]="rental.description"type="text" class="form-control" placeholder="Description" aria-label="desc"
+            aria-describedby="basic-addon1" readonly>
+        </p>
+        <p>
+          <label for="price">Cancellations</label>
+          <input class="border" [(ngModel)]="rental.cancellations" type="text" class="form-control" placeholder="Cancellations" aria-label="cancellations"
+            aria-describedby="basic-addon1" readonly>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div> -->

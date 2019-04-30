@@ -1,0 +1,16 @@
+.cover {
+  height: 300px;
+  width: 300px;
+padding-left: 50px;
+object-fit: contain;
+
+}
+
+.td {
+  word-wrap:break-word;
+}
+.table td {
+  border: 1px solid#e6d2dd;
+  /* padding-right: 100px; */
+
+}

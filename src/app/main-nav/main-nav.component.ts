@@ -18,10 +18,13 @@ export class MainNavComponent implements OnInit {
   ngOnInit() {
   }
 
-  showAbout() {
-    this.toastService.showToast('success', 7000, 'This application was created by Lucas Phan (C).');
-    this.http.testing();
-  }
+  // showAbout() {
+  //   this.toastService.showToast('success', 7000, 'This application was created by Lucas Phan (C).');
+  //   this.http.testing();
+  // }
+  // navigatetTo(path: string) {
+  //   this.router.navigate([path]);
+  // }
 
   async logout() {
     const resp = await this.http.logout();

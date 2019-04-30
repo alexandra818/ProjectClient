@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   ) {
   }
 
+  // issue
   ngOnInit() {
     const token = localStorage.getItem('id_token');
     if (token != null) {

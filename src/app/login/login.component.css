@@ -7,7 +7,7 @@
 
 .login-form {
   padding: 25px;
-  background-color: #FFF;
+  background-color: #343434
 }
 .login-logo > img {
   object-fit: cover;
@@ -15,4 +15,8 @@
   display: block;
   height: 200px;
   margin: -25px -25px 25px -25px;
+}
+
+.form-group {
+  color: white;
 }

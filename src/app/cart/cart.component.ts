@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { ToastService } from '../toast/toast.service';
 import { HttpService } from '../../shared-service/http.service';
-export interface IBike {
+export interface IRental {
   id?: number;
   image: string;
   price: number;
@@ -18,9 +18,9 @@ export interface IBike {
 })
 export class CartComponent implements OnInit {
 
-  bikes: Array<IBike> = [];
+  rentals: Array<IRental> = [];
   myName = '';
-  rentals = [];
+  rental = [];
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -71,10 +71,10 @@ export class CartComponent implements OnInit {
     return resp;
   }
 
-  async removeRental(car: any, index: number) {
+  async removeRental(rental: any, index: number) {
     console.log('from removeR...', index);
     // this.rentals.splice(index, 1);
-    const resp = await this.http.delete(`rental/id/${car.id}`);
+    const resp = await this.http.delete(`rental/id/${rental.id}`);
     console.log('resp from removeR...', resp);
     if (resp) {
       this.refresh();
