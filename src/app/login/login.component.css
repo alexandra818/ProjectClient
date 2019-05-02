@@ -7,14 +7,16 @@
 
 .login-form {
   padding: 25px;
-  background-color: #343434
+  background-color: #606060;
+  /* background-color: #343434 */
 }
 .login-logo > img {
-  object-fit: cover;
+  object-fit: contain;
   width: calc(100% + 50px);
   display: block;
   height: 200px;
   margin: -25px -25px 25px -25px;
+  margin-top: 3px;
 }
 
 .form-group {

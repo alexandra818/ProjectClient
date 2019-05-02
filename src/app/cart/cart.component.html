@@ -6,7 +6,7 @@
   <li class="nav-item">
     <button mat-raised-button color="primary" (click)="createRental()">Post New Rental</button>
   </li>
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <button mat-raised-button color="primary">Add Bike Model 2</button>
   </li>
   <li class="nav-item">
@@ -14,14 +14,14 @@
     </li>
   <li class="nav-item">
     <button mat-raised-button color="primary">Checkout</button>
-  </li>
+  </li> -->
 </ul>
 
 <div class="contact-grid">
   <div class="gallery-grid">
     <mat-card class="example-card" *ngFor="let rental of rentals; let i = index">
       <mat-card-content>
-        <img class="cover" [attr.src]="rental.image_url" alt="bike">
+        <img class="cover" [attr.src]="rental.image_url" alt="Image">
         <p>
           <label for="image">Image</label>
           <input [(ngModel)]="rental.image_url" type="text" class="form-control" placeholder="Image" aria-label="Image">

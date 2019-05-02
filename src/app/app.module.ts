@@ -15,6 +15,10 @@ import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { SharedServiceModule } from '../shared-service/shared-service.module';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { MessageComponent } from './message/message.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { ContactComponent } from './contact/contact.component';
     MainNavComponent,
     HomeComponent,
     CartComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent,
+    AboutComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,

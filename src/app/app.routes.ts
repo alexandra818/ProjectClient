@@ -3,6 +3,8 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { MessageComponent } from './message/message.component';
 
 const appRoutes: Routes = [
   {
@@ -12,6 +14,9 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent
   }, {
+    path: 'about',
+    component: AboutComponent
+  }, {
     path: 'contact',
     component: ContactComponent
   }, {
@@ -20,6 +25,12 @@ const appRoutes: Routes = [
   }, {
     path: 'home',
     component: HomeComponent
+  }, {
+    path: 'message',
+    component: MessageComponent
+  }, {
+    path: '**',
+    component: LoginComponent
   }
 ];
 

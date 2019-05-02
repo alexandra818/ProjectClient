@@ -1,9 +1,28 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 90vh;
+    align-items: center;
+  }
+  
+  .contact-form {
+    padding: 15px;
+    background-color: #606060;
+    /* background-color: #343434 */
+  }
+  .contact-logo > img {
+    object-fit: contain;
+    width: calc(100% + 50px);
+    display: block;
+    height: 200px;
+    margin: -25px -25px 25px -25px;
+    margin-top: 3px;
+  }
+  
+  .form-group {
+    color: white;
+  }
 
-.form-group {
-width: 500px;
-
-}
-.form-group-email {
-    width: 500px;
-      
-}
+  .btn {
+    float: right;
+  }

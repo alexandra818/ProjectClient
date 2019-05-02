@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     const resp: any = await this.http.post('user/login', user);
     if (resp && resp.token) {
       localStorage.setItem('id_token', resp.token);
-      this.toastService.showToast('success', 3000, 'Login Success.');
+      this.toastService.showToast('success', 3000, 'Welcome!');
       this.router.navigate(['']);
     } else {
       this.toastService.showToast('danger', 3000, 'Login Failed.');

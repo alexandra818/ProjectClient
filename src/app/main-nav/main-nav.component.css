@@ -24,6 +24,14 @@
   background-color: #ffe503 !important;
 }
 
+.nav-link:hover {
+  background-color: #3B7EEE;
+  transition-duration: 0.9s;
+}
 .brand {
   height: 65px;
+}
+
+.mat-primary {
+  background-color: #606060;
 }

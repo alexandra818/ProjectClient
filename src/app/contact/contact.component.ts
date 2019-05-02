@@ -3,51 +3,51 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { ToastService } from '../toast/toast.service';
 import { HttpService } from '../../shared-service/http.service';
-
 export interface IContact {
   id?: number;
+  fullName: string;
   email: string;
   message: string;
 }
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  user: IContact = { email: null, message: null };
-  currentUser = {};
-  loggedIn = false;
+
+  contacts: Array<IContact> = [];
+  myName = '';
+  contact = [];
   constructor(
+    private activatedRoute: ActivatedRoute,
     private router: Router,
     private toastService: ToastService,
     private http: HttpService
-  ) {
-  }
+  ) { }
 
   async ngOnInit() {
-    await this.refresh();
-    // this.rentals = await this.getRentals('rental');
 
   }
 
-  async refresh() {
-  }
-
-  async createMessage() {
+  async createContact() {
     const contact = {
+      fullName: null,
       email: null,
       message: null
     };
     const resp = await this.http.post('contact', contact);
-    console.log('from createContact resp: ', resp);
     if (resp) {
-      this.refresh();
+      this.toastService.showToast('success', 3000, 'Sent!');
 
     } else {
       this.toastService.showToast('danger', 3000, 'Unable to post.');
   }
   return resp;
 }
+
+
 }
+
 

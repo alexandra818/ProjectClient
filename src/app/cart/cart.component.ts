@@ -7,7 +7,8 @@ export interface IRental {
   id?: number;
   image: string;
   price: number;
-  quantity: number;
+  location: string;
+  cancellation: string;
   description: string;
 }
 
