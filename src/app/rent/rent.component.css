@@ -1,4 +1,7 @@
+.nav-item {
+  padding-top: 20px;
 
+}
 .main-nav {
   margin:20px auto;
   background-color: transparent !important;
@@ -43,5 +46,5 @@
 }
 
 .mat-primary {
-  background-color: #1FC746;
+  background-color: #1dba4c;
 }

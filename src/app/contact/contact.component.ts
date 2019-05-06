@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { ToastService } from '../toast/toast.service';
 import { HttpService } from '../../shared-service/http.service';
@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
 
   contacts: Array<IContact> = [];
   myName = '';
-  contact = [];
+  contact = {};
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -31,13 +31,13 @@ export class ContactComponent implements OnInit {
 
   }
 
-  async createContact() {
-    const contact = {
-      fullName: null,
-      email: null,
-      message: null
+  async createContact(contact) {
+    const newContact = {
+      fullName: contact.fullName,
+      email: contact.email,
+      message: contact.message
     };
-    const resp = await this.http.post('contact', contact);
+    const resp = await this.http.post('contact', newContact);
     if (resp) {
       this.toastService.showToast('success', 3000, 'Sent!');
 
@@ -47,6 +47,13 @@ export class ContactComponent implements OnInit {
   return resp;
 }
 
+async updateContact(contact: any) {
+  const resp = await this.http.put(`contact/id/${contact.id}`, contact);
+  if (resp) {
+    this.toastService.showToast('success', 3000, 'Successfully updated.');
+  }
+  return resp;
+}
 
 }
 

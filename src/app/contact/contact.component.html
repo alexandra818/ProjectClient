@@ -1,6 +1,6 @@
 <div class="contact-grid">
     <div></div>
-    <form class="contact-form">
+    <form class="contact-form box-shadow">
       <div class="contact-logo">
         <img src="../../img/splash.png" alt="logo">
       </div>      
@@ -16,7 +16,11 @@
         <label for="exampleInputMessage1">Message</label>
         <textarea [(ngModel)]="contact.message" name="message" type="text" class="form-control" id="exampleInputMessage1" aria-describedby="emailHelp" placeholder="Message"></textarea>
       </div>
-      <button type="button" class="btn btn-primary" (click)="createContact()">Send</button>
+
+      <button  type="button" class="btn box-shadow" (click)="createContact(contact)">Send</button>
+      <ul class="links">
+        <li><a [routerLink]="['login']" class="stretched-link">Have an account? Login!</a></li>
+    </ul>
     </form>
     <div></div>
   </div>

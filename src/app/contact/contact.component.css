@@ -7,8 +7,9 @@
   
   .contact-form {
     padding: 15px;
-    background-color: #606060;
-    /* background-color: #343434 */
+    background-color: rgb(200, 228, 252);
+    border-radius: 25px;
+
   }
   .contact-logo > img {
     object-fit: contain;
@@ -21,8 +22,25 @@
   
   .form-group {
     color: white;
+    color: black;
+  }
+.form-control {
+  border: solid 0.5px #166fc9;
+}
+  .btn {
+    float: right;
   }
 
   .btn {
-    float: right;
+    background-color: #1dbab4;
+    padding: 10px;
+    width: 100px;
+    color: white;
+  }
+
+  .links {
+    list-style-type: none;
+    text-align: left;
+    padding: 20px;
+   
   }

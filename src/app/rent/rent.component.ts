@@ -13,11 +13,11 @@ export interface IRental {
 }
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-rent',
+  templateUrl: './rent.component.html',
+  styleUrls: ['./rent.component.css']
 })
-export class CartComponent implements OnInit {
+export class RentComponent implements OnInit {
 
   rentals: Array<IRental> = [];
   myName = '';

@@ -12,12 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { HomeComponent } from './home/home.component';
-import { CartComponent } from './cart/cart.component';
+import { RentComponent } from './rent/rent.component';
 import { SharedServiceModule } from '../shared-service/shared-service.module';
 import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { MessageComponent } from './message/message.component';
+
 
 
 @NgModule({
@@ -26,11 +26,11 @@ import { MessageComponent } from './message/message.component';
     LoginComponent,
     MainNavComponent,
     HomeComponent,
-    CartComponent,
+    RentComponent,
     ContactComponent,
-    FooterComponent,
     AboutComponent,
     MessageComponent,
+
   ],
   imports: [
     BrowserModule,

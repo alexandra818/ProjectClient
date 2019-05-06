@@ -11,6 +11,7 @@
 .contact-button{
   margin-right: 9px;
   float:right;
+  background-color: #F19F4D;
 }
 .contact-grid {
   display:grid;
@@ -25,13 +26,24 @@
 }
 
 .nav-link:hover {
-  background-color: #3B7EEE;
+  background-color: #1dbab4;
   transition-duration: 0.9s;
+  border-radius: 5px;
 }
 .brand {
-  height: 65px;
+  height: 85px;
 }
 
 .mat-primary {
-  background-color: #606060;
+  background-color: #166fc9;
+  padding: 10px;
 }
+
+.btn {
+  background-color: #1dbab4;
+  padding: 10px;
+  width: 100px;
+  color: white;
+}
+
+

@@ -7,7 +7,8 @@ export interface IRental {
   id?: number;
   image: string;
   price: number;
-  quantity: number;
+  location: string;
+  cancellation: string;
   description: string;
 }
 @Component({
@@ -15,6 +16,7 @@ export interface IRental {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   rentals: Array<IRental> = [];
   myName = '';
@@ -25,7 +27,6 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private http: HttpService
   ) { }
-
   // if not logged in, route to login
   async ngOnInit() {
     await this.refresh();
@@ -46,11 +47,6 @@ export class HomeComponent implements OnInit {
 
   async getRentals(path: string) {
     const resp = await this.http.get(path);
-    console.log('resp from getRentals()', resp);
     return resp;
   }
-
-
-
 }
-

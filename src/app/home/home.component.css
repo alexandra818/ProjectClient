@@ -1,29 +1,51 @@
-.main-app-grid- {
+.main-app-grid {
   display: grid;
   grid-template-rows: 1fr 13fr 1fr;
   height: 100%;
+  overflow: auto;
 }
 
 .main-header {
-  background-color:  #E6E6E6;
-  padding: 20px;
+  padding: 240px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 2.5em;
-  color: #2A7DF6;
+  font-size: 6em;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
+  background-image: url('/img/pool2 copy.jpg');
+  background-size: cover;
+  position: relative;
+  
 }
+
+.nav-item {
+  padding: 10px;
+}
+.main-nav {
+  margin:20px auto;
+  background-color: transparent !important;
+  padding:0 5%;
+}
+.nav-action-container {
+  padding:0 5%;
+}
+
 .thead-primary {
-  background-color: #2A7DF6;
-  color: #FFF;
+  background-color: #1dbab4;
+  color: rgb(255, 255, 255);
+  border: 1px solid #A3A3A3;
 }
 .main-content {
-  background-color: #E6E6E6;
+  background-color: rgb(240, 240, 240);
   margin: 20px auto;
-  width: 100%;
-  height: 80vh;
+  width:70%; 
+  margin-left:15%; 
+  margin-right:15%;
   max-height: 80vh;
-  overflow: auto;
+ position: relative;
+
+ 
   
 
 }
@@ -31,21 +53,11 @@
 .cover {
   height: 300px;
   width: 300px;
-padding-left: 50px;
-object-fit: cover;
+  object-fit: cover;
+  padding-left: 40px;
 
 }
 
-
-.form-control {
-  white-space: initial;
-  overflow: hidden;
-
-}
-
-.td {
- word-wrap: break-word;
-}
 
 .table td {
   border: 1px solid #A3A3A3;
@@ -56,7 +68,14 @@ object-fit: cover;
   text-align: center;
 }
 
-.d-block {
-  object-fit: contain;
-
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+

@@ -32,6 +32,10 @@
   display: inline-block;
 
   }
+
+  .links>li >a:hover {
+   color: #3B7EEE;
+  }
   
 
 
@@ -40,8 +44,8 @@ h2 {
     font-weight: bold;
     text-align: center;
     color: black;
-    font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
 }
 
 h3 {
@@ -63,7 +67,7 @@ h3 {
     display: grid;
     height: 100vh;
     align-items: center;
-    margin: 40px auto;
+    margin:  25px auto;
     width: 100%;
     max-height: 80vh;
     overflow: auto;
@@ -74,10 +78,7 @@ h3 {
     padding: 40px 20px;
     height: 100%;
     background-color: white;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    background-size: cover;
-    border-radius: 25px;
+    border-radius: 35px;
    
 }
 
