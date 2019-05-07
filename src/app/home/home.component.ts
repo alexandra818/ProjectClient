@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastService } from '../toast/toast.service';
 import { HttpService } from '../../shared-service/http.service';
 
 export interface IRental {
@@ -27,7 +26,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private http: HttpService
   ) { }
-  // if not logged in, route to login
+
   async ngOnInit() {
     await this.refresh();
     const token = localStorage.getItem('id_token');

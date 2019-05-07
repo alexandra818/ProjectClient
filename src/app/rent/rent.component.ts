@@ -31,8 +31,6 @@ export class RentComponent implements OnInit {
 
   async ngOnInit() {
     await this.refresh();
-    // this.rentals = await this.getRentals('rental');
-
   }
 
   async refresh() {
@@ -41,7 +39,6 @@ export class RentComponent implements OnInit {
 
   async getRentals(path: string) {
     const resp = await this.http.get(path);
-    console.log('resp from getRentals()', resp);
     return resp;
   }
 
@@ -53,7 +50,6 @@ export class RentComponent implements OnInit {
       cancellations: null
     };
     const resp = await this.http.post('rental', rental);
-    console.log('from createRental resp: ', resp);
     if (resp) {
       this.refresh();
 
@@ -64,7 +60,6 @@ export class RentComponent implements OnInit {
 }
 
   async updateRental(rental: any) {
-    console.log('from updateRental rental: ', rental);
     const resp = await this.http.put(`rental/id/${rental.id}`, rental);
     if (resp) {
       this.toastService.showToast('success', 3000, 'Successfully updated.');

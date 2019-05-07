@@ -47,13 +47,13 @@ export class ContactComponent implements OnInit {
   return resp;
 }
 
-async updateContact(contact: any) {
-  const resp = await this.http.put(`contact/id/${contact.id}`, contact);
-  if (resp) {
-    this.toastService.showToast('success', 3000, 'Successfully updated.');
-  }
-  return resp;
-}
+// async updateContact(contact: any) {
+//   const resp = await this.http.put(`contact/id/${contact.id}`, contact);
+//   if (resp) {
+//     this.toastService.showToast('success', 3000, 'Successfully updated.');
+//   }
+//   return resp;
+// }
 
 }
 
